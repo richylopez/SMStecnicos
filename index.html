@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO BUSQUEDA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    
+    <div class="w-full max-w-xs">
+        <form id="form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="">
+                 <p class="text-center text-black">
+                 <b><a target="_blank">SOLICITUD DE BUSQUEDA DE TRABAJADORES</a></b>
+                 <br>  </br>
+            </p>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Nombre">
+                    Nombre y Apellido del Solicitante.
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Nombre" id="Nombre" type="text" placeholder="Ingresa tu nombre y Apellido" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Celular">
+                      Numero de Celular. <i class="fab fa-whatsapp"></i>
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Celular" id="Celular" type="tel" placeholder="Numero de whatsapp" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Zona">
+                    Zona o Distrito del Servicio.
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Zona" id="Zona" type="text" placeholder="Zona donde se trabajara" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Direccion">
+                    Dirección de la Ubicación.
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Direccion" id="Direccion" type="text" placeholder="Av.,Barrio,calle del lugar" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Servicio1">
+                    Tipo de Trabajo Requerido.
+                </label>                  
+                    <select name="Servicio1" id="Servicio1"onchange="carg(this);" 
+                    class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" > 
+                        <option value="11"></option>
+                        <option value="10">Albañil</option>
+                        <option value="9">Plomero</option>
+                        <option value="8">Electrico de Casa</option>
+                        <option value="7">Electrico Vehiculo</option>
+                        <option value="6">Mecanico de auxilio</option>
+                        <option value="5">Enfermer@</option>
+                        <option value="4">Empleada Domestica</option>
+                        <option value="3">Pintor</option>
+                        <option value="2">Paisajista</option>
+                        <option value="1">Otros</option>
+                    </select>
+                    <br>  </br>
+                    <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Servicio2" id="Servicio2"  type="text" placeholder="Otro Servicio Ej: Cosinera" >
+                                        
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Cantidad">
+                    Cantidad de Personal.
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Cantidad" id="Cantidad" type="number" placeholder="Nº de trabajadores que requiere" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Requisitos">
+                    Requisitos para el Trabajo.
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="Requisitos" id="Requisitos" type="text" placeholder="Ej. Tener herramientas propias">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Detalle">
+                    Detalle del Trabajo.
+                </label>
+                   <textarea name="Detalle" id="Detalle"rows="4" cols="35" placeholder="Ej. Pintar 3 habitaciones mas la barda, solo fin de semana"
+                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <br>  </br>
+
+            <div class="flex items-center justify-between">
+                <button id="submit"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    <i class="fab fa-whatsapp"></i> Enviar Registro
+                </button>
+            </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+            Desarrollado por: <b><a target="_blank" href="https://google.com">TRABAJOS 24/7</a></b>
+        </p>
+    </div>
+    <script src="https://kit.fontawesome.com/1e268974cb.js" crossorigin="anonymous"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+ 
+</body>
+
+</html>
